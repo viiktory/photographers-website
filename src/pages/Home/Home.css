@@ -1,0 +1,28 @@
+.home__section {
+    background: url("../../assets/background-hero.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 145px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.home__text{
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 68px;
+}
+
+.home__span {
+    color: var(--spanHome);
+    font-size: 100px;
+    font-family: 'The Nautigal', cursive;
+}
+
+.home__title {
+    color: var(--secondary);
+    font-size: 100px;
+    font-weight: 700;
+}

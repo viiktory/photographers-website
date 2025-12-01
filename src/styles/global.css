@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+
+:root {
+    --primary: #0D2002;
+    --secondary: #F8FFFA;
+    --spanHome: #D9FFE4;
+    --spanDecor: #327F00;
+
+    --title-h1: 100px;
+    --description: 27px;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding-inline: 20px;
+}
