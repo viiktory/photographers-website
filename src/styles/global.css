@@ -5,6 +5,7 @@
     --secondary: #F8FFFA;
     --spanHome: #D9FFE4;
     --spanDecor: #327F00;
+    --hover: #008124;
 
     --title-h1: 100px;
     --description: 27px;
@@ -12,6 +13,8 @@
 
 body {
     font-family: 'Helvetica', sans-serif;
+    text-transform: uppercase;
+    scroll-behavior: smooth;
 }
 
 .container {

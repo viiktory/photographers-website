@@ -1,4 +1,4 @@
-import Navigation from "./Navigation"
+import {Navigation} from "../../components"
 import "./Header.css"
 
 const Header = () => {

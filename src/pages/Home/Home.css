@@ -19,6 +19,7 @@
     color: var(--spanHome);
     font-size: 100px;
     font-family: 'The Nautigal', cursive;
+    text-transform: capitalize;
 }
 
 .home__title {
