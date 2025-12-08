@@ -9,3 +9,5 @@ export {default as Portfolio} from './Portfolio/Portfolio'
 export {default as Card} from './Portfolio/Card/Card'
 
 export {default as Footer} from './Footer/Footer'
+
+export {default as Form} from './Form/Form'

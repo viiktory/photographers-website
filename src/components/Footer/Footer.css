@@ -12,4 +12,5 @@
 .footer .navigation__list {
     flex-direction: row;
     gap: 20px;
+    color: var(--footerLinks);
 }

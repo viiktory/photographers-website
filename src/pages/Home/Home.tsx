@@ -1,4 +1,4 @@
-import {Portfolio} from '../../components'
+import {Form, Portfolio} from '../../components'
 import "./Home.css"
 
 const Home = () => {
@@ -11,6 +11,7 @@ const Home = () => {
         </div>
       </section>
       <Portfolio/>
+      <Form/>
     </>
   )
 }
