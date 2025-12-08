@@ -1,8 +1,4 @@
-const navLinks = [
-  {name: "Контакти", path: "#contact"},
-  {name: "Проєкти", path: "#projects"},
-  {name: "Галерея", path: "#gallery"},
-]
+import {navLinks} from '../../../data/nav/navLinks';
 
 const Navigation = () => {
 
