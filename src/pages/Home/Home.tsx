@@ -1,4 +1,5 @@
-import {Form, Portfolio} from '../../components'
+import {Portfolio} from '../../components'
+import {Contacts} from '../../pages'
 import "./Home.css"
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
         </div>
       </section>
       <Portfolio/>
-      <Form/>
+      <Contacts/>
     </>
   )
 }

@@ -1,42 +1,66 @@
-import "./Form.css"
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {formSchema} from "../../features/formValidation";
+import type {TContactForm} from "../../features/formTypes.ts";
+import styles from "./Form..module.css"
 
 const Form = () => {
-  return (
-    <section id="contact" className="form__container container">
 
-      <div className="form__title">
-        <p className="form__span">
+  const {
+    register,
+    handleSubmit,
+    formState: {errors},
+    reset
+  } = useForm<TContactForm>({
+    resolver: zodResolver(formSchema),
+  });
+
+  const onSubmit = (data: TContactForm) => {
+    console.log("FORM SUBMITTED:", data);
+    reset();
+  };
+
+  return (
+    <section className={`${styles.formContainer} container`}>
+
+      <div className={styles.formTitle}>
+        <p className={styles.formSpan}>
           залиште свій номер <br/> для зворотнього зв’язку
         </p>
-        <h2 className="form__hello">Привіт,</h2>
+        <h2 className={styles.formHello}>Привіт,</h2>
       </div>
 
 
-      <form className="form">
-
-        <div className="form__row">
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <div className={styles.formRow}>
           <label htmlFor="name">Моє ім’я</label>
-          <input id="name" name="name" type="text"
-                 placeholder="додайте ваше ім’я тут" required/>
+          <input id="name" type="text"
+                 placeholder="додайте ваше ім’я тут"
+                 {...register("name")}
+          />
+          {errors.name && <span>{errors.name.message}</span>}
         </div>
 
-        <div className="form__row">
+        <div className={styles.formRow}>
           <label htmlFor="phone">Мій номер</label>
-          <input id="phone" name="phone" type="tel"
-                 placeholder="введіть ваш номер телефону" required/>
+          <input id="phone" type="tel"
+                 placeholder="введіть ваш номер телефону"
+                 {...register("phone")}
+          />
+          {errors.phone && <span>{errors.phone.message}</span>}
         </div>
 
-        <div className="form__row">
+        <div className={styles.formRow}>
           <label htmlFor="details">Мені потрібно</label>
           <textarea
             id="details"
-            name="details"
             placeholder="напишіть деталі (необов’язково)"
+            {...register("details")}
           ></textarea>
+          {errors.details && <span>{errors.details.message}</span>}
         </div>
 
-        <button type="submit" className="form__btn">Надіслати</button>
-
+        <button type="submit" className={styles.formButton}>Надіслати</button>
       </form>
     </section>
   )

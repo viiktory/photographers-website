@@ -1,15 +1,15 @@
-.form__container {
+.formContainer {
     flex-direction: column;
-    padding-block: 150px 100px;
+    padding-bottom:  100px;
 }
 
-.form__title {
+.formTitle {
     color: var(--footerLinks);
     display: inline-flex;
     gap: 237px;
 }
 
-.form__hello, label {
+.formHello, label {
     color: var(--primary);
     font-size: 86px;
 }
@@ -19,14 +19,14 @@
     flex-direction: column;
 }
 
-.form__row {
+.formRow {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-.form__row input,
-.form__row textarea {
+.formRow input,
+.formRow textarea {
     color: var(--placeholder);
     flex: 1;
     border-bottom: 1px solid #C2E4CC;
@@ -37,13 +37,13 @@
     text-align: center;
 }
 
-.form__row textarea {
+.formRow textarea {
     min-height: 120px;
     padding-top:80px;
 
 }
 
-.form__btn {
+.formButton {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
 
     transition: color 0.3s ease;
 }
-.form__btn:hover {
+.formButton:hover {
     color: var(--secondary);
     background: var(--hover);
 }
