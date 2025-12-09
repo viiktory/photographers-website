@@ -1,0 +1,23 @@
+.socialLink {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    padding: 0 4px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: var(--hover);
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+

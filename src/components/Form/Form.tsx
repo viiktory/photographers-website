@@ -38,7 +38,7 @@ const Form = () => {
                  placeholder="додайте ваше ім’я тут"
                  {...register("name")}
           />
-          {errors.name && <span>{errors.name.message}</span>}
+          {errors.name &&<span className="errors">{errors.name.message}</span>}
         </div>
 
         <div className={styles.formRow}>
@@ -47,7 +47,7 @@ const Form = () => {
                  placeholder="введіть ваш номер телефону"
                  {...register("phone")}
           />
-          {errors.phone && <span>{errors.phone.message}</span>}
+          {errors.phone && <span className="errors">{errors.phone.message}</span>}
         </div>
 
         <div className={styles.formRow}>
@@ -57,7 +57,7 @@ const Form = () => {
             placeholder="напишіть деталі (необов’язково)"
             {...register("details")}
           ></textarea>
-          {errors.details && <span>{errors.details.message}</span>}
+          {errors.details && <span className="errors">{errors.details.message}</span>}
         </div>
 
         <button type="submit" className={styles.formButton}>Надіслати</button>

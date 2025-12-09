@@ -1,8 +1,0 @@
-.socialLink {
-    font-size: 22px;
-    transition: color 0.3s ease-in-out;
-}
-
-.socialLink:hover {
-    text-decoration: underline 2px solid var(--hover);
-}

@@ -26,3 +26,8 @@ body {
     margin: 0 auto;
     padding-inline: 20px;
 }
+
+.errors {
+    font-size: 14px;
+    color: red;
+}

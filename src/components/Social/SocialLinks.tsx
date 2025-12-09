@@ -1,4 +1,4 @@
-import styles from "./SocialLinks.module.css"
+import "./SocialLinks.css";
 
 type Props = {
   label: string;
@@ -7,7 +7,7 @@ type Props = {
 
 const SocialLinks = ({label, url}: Props) => {
   return (
-    <a className={styles.socialLink} href={url}
+    <a className="socialLink" href={url}
        aria-label="social links"
        target="_blank"
        rel="noopener noreferrer">
