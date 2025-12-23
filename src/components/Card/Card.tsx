@@ -1,6 +1,7 @@
 import "./Card.css"
 
 type Props = {
+  key?: number
   imgSrc: string;
   span?: string;
   title?: string;

@@ -1,0 +1,12 @@
+.gallery {
+    display: flex;
+    gap: 26px;
+   padding-block: 100px;
+}
+
+.gallery img {
+    flex: 1;            /* 🔑 кожне фото займає однакову ширину */
+    width: 100%;
+    height: auto;
+    object-fit: cover;  /* щоб красиво обрізалось */
+}

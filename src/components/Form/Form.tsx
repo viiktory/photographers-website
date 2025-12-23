@@ -34,30 +34,39 @@ const Form = () => {
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <div className={styles.formRow}>
           <label htmlFor="name">Моє ім’я</label>
-          <input id="name" type="text"
-                 placeholder="додайте ваше ім’я тут"
-                 {...register("name")}
-          />
-          {errors.name &&<span className="errors">{errors.name.message}</span>}
+          <div className={styles.fieldWrapper}>
+            <input id="name" type="text"
+                   placeholder="додайте ваше ім’я тут"
+                   {...register("name")}
+            />
+            {errors.name &&
+                <span className="errors">{errors.name.message}</span>}
+          </div>
         </div>
 
         <div className={styles.formRow}>
           <label htmlFor="phone">Мій номер</label>
-          <input id="phone" type="tel"
-                 placeholder="введіть ваш номер телефону"
-                 {...register("phone")}
-          />
-          {errors.phone && <span className="errors">{errors.phone.message}</span>}
+          <div className={styles.fieldWrapper}>
+            <input id="phone" type="tel"
+                   placeholder="введіть ваш номер телефону"
+                   {...register("phone")}
+            />
+            {errors.phone &&
+                <span className="errors">{errors.phone.message}</span>}
+          </div>
         </div>
 
         <div className={styles.formRow}>
           <label htmlFor="details">Мені потрібно</label>
-          <textarea
-            id="details"
-            placeholder="напишіть деталі (необов’язково)"
-            {...register("details")}
-          ></textarea>
-          {errors.details && <span className="errors">{errors.details.message}</span>}
+          <div className={styles.fieldWrapper}>
+            <textarea
+              id="details"
+              placeholder="напишіть деталі (необов’язково)"
+              {...register("details")}
+            ></textarea>
+            {errors.details &&
+                <span className="errors">{errors.details.message}</span>}
+          </div>
         </div>
 
         <button type="submit" className={styles.formButton}>Надіслати</button>

@@ -1,5 +1,4 @@
-import {Portfolio} from '../../components'
-import {Contacts} from '../../pages'
+import {Contacts, Portfolio, Gallery} from '../../pages'
 import "./Home.css"
 
 const Home = () => {
@@ -12,6 +11,7 @@ const Home = () => {
         </div>
       </section>
       <Portfolio/>
+      <Gallery/>
       <Contacts/>
     </>
   )

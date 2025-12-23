@@ -4,9 +4,9 @@ export {default as Navigation} from './Header/Navigation/Navigation'
 
 export {default as Layout} from './Layout/Layout'
 
-export {default as Portfolio} from './Portfolio/Portfolio'
+export {default as Portfolio} from '../pages/Portfolio/Portfolio.tsx'
 
-export {default as Card} from './Portfolio/Card/Card'
+export {default as Card} from './Card/Card'
 
 export {default as Footer} from './Footer/Footer'
 
