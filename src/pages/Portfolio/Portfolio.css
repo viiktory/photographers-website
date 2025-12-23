@@ -1,14 +1,15 @@
 .portfolio {
     flex-direction: column;
-    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 .portfolio__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 160px;
+    column-gap: 160px;
+    row-gap: 120px;
     max-width: 1440px;
-    margin: 100px auto 0;
+    margin: 0 auto;
     padding-inline: 20px;
     position: relative;
 
@@ -24,6 +25,14 @@
     background: #C2E4CC;
     transform: translateX(-50%);
     z-index: 1;
+}
+
+.portfolio__content > *:nth-child(odd) {
+    transform: translateY(40px);
+}
+
+.portfolio__card {
+    width: 100%;
 }
 
 .portfolio__btn {

@@ -1,7 +1,7 @@
 import {useState} from "react";
 import iconArrow from "../../assets/icon/arrowRight.svg"
 import {Card} from "../../components";
-import {portfolioItems} from "../../data/portfolioItems/portfolioItems.ts";
+import {portfolioItems} from "../../data/portfolio/portfolioItems.ts";
 import "./Portfolio.css"
 
 const Portfolio = () => {
@@ -12,12 +12,14 @@ const Portfolio = () => {
   }
 
   return (
-    <section className="container portfolio">
-      <div id="projects" className="portfolio__content">
+    <section id="projects" className="container portfolio">
+      <div  className="portfolio__content">
         {portfolioItems.slice(0, visible).map((item, index) => (
           <Card key={index}
                 imgSrc={item.imgSrc} title={item.title}
-                span={item.span}/>
+                span={item.span}
+                className="portfolio__card"
+          />
         ))}
       </div>
       {visible < portfolioItems.length && (

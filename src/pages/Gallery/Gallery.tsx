@@ -1,14 +1,25 @@
-import gallery1 from "../../../public/images/gallery/gallery1.jpg";
-import gallery2 from "../../../public/images/gallery/gallery2.jpg";
-import gallery3 from "../../../public/images/gallery/gallery3.jpg";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import {gallery} from "../../data/gallery/gallery.ts";
 import "./Gallery.css"
 
 const Gallery = () => {
   return (
-    <section className="gallery">
-      <img src={gallery1} alt=""/>
-      <img src={gallery2} alt=""/>
-      <img src={gallery3} alt=""/>
+    <section id="gallery" className="gallery">
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={26}
+      loop={true}
+      modules={[Autoplay]}
+      autoplay={{delay: 2000}}
+    >
+      {gallery.map((img) => (
+        <SwiperSlide key={img.id}>
+          <img src={img.src} alt={img.alt}  />
+        </SwiperSlide>
+      ))}
+    </Swiper>
     </section>
   )
 }
