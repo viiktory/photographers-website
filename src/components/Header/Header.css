@@ -29,6 +29,10 @@
     transition: color 0.1s ease-in-out;
 }
 
+.nav-link--active {
+    color: var(--hover);
+}
+
 .header__logo {
     font-size: 16px;
     font-weight: 700;

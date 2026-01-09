@@ -13,7 +13,7 @@ const Portfolio = () => {
 
   return (
     <section id="projects" className="container portfolio">
-      <div  className="portfolio__content">
+      <div className="portfolio__content">
         {portfolioItems.slice(0, visible).map((item, index) => (
           <Card key={index}
                 imgSrc={item.imgSrc} title={item.title}
