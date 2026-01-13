@@ -23,7 +23,8 @@ export const gallery = [
     id: 5,
     src: "/images/gallery/gallery5.jpg",
     alt: "Галерея фото 5",
-  }, {
+  },
+  {
     id: 6,
     src: "/images/gallery/gallery6.jpg",
     alt: "Галерея фото 6",
